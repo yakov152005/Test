@@ -192,28 +192,17 @@ public class MainPanel extends JPanel {
         long startTime = System.currentTimeMillis();
         super.paintComponent(g);
         doNotChange(g);
-
         long elapsedTime = System.currentTimeMillis() - startTime;
-
 
         if (elapsedTime < 60 * 1000) {
 
             try {
                 Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-
+            } catch (InterruptedException e) { e.printStackTrace();}
             Utils.colorRandomPixel(this, g);
-
-
             repaint();
         }
     }
-
-
-
 
     private void doNotChange (Graphics g) {
         if (this.stage3) {

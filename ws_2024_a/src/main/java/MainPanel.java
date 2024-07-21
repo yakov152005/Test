@@ -189,6 +189,7 @@ public class MainPanel extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
+        long startTime = System.currentTimeMillis();
         super.paintComponent(g);
         doNotChange(g);
 
@@ -212,7 +213,6 @@ public class MainPanel extends JPanel {
     }
 
 
-    private long startTime = System.currentTimeMillis();
 
 
     private void doNotChange (Graphics g) {
